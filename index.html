@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <title>心心</title>
+    <style>
+      .element {
+        position: absolute;
+        font-size: 30px;
+        left: 30px;
+        top: 50px;
+        line-height: 50px;
+        z-index: 999;
+      }
+    </style>
 
     <link
       href="favicon.ico"
@@ -47,40 +57,16 @@
 
     <script type="text/javascript" src="js/love.js"></script>
 
-    <div class="one">
-      <span class="myone"></span>
-      <audio controls autoplay>
-        <source src="mp3/zzsc.mp3" />
-      </audio>
+    <!-- <div class="one"> -->
+    <audio controls autoplay>
+      <source src="mp3/zzsc.mp3" />
+    </audio>
 
-      <table width="100%" id="background" class="wall my">
-        <tr>
-          <td rowspan="2" class="td1">
-            <img src="./img/a1.jpg" alt="" />
-          </td>
-          <td class="td2">
-            <img src="./img/a4.jpg" alt="" />
-          </td>
-          <td rowspan="2" class="td3">
-            <img src="./img/a2.jpg" alt="" />
-          </td>
-          <td class="td4">
-            <img src="./img/a5.jpg" alt="" />
-          </td>
-        </tr>
-        <tr>
-          <td class="td5">
-            <img src="./img/a3.jpg" alt="" />
-          </td>
-          <td class="td6">
-            <img src="./img/a6.jpg" alt="" />
-          </td>
-        </tr>
-      </table>
-      <div id="midground" class="wall"></div>
-      <div id="foreground" class="wall"></div>
-      <div id="top" class="wall"></div>
-    </div>
+    <div id="background" class="wall one"></div>
+    <div id="midground" class="wall"></div>
+    <div id="foreground" class="wall"></div>
+    <div id="top" class="wall"></div>
+    <!-- </div> -->
 
     <script>
       const div = document.querySelector(".container");
@@ -111,7 +97,7 @@
       });
       setTimeout(() => {
         // div2.style.display = "black";
-        div.style.display = "none";
+        // div.style.display = "none";
       }, 25000);
     </script>
   </body>
