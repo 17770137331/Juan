@@ -12,6 +12,12 @@
         line-height: 50px;
         z-index: 999;
       }
+      .container {
+        background-color: white;
+      }
+      .wall {
+        display: none;
+      }
     </style>
 
     <link
@@ -70,6 +76,8 @@
 
     <script>
       const div = document.querySelector(".container");
+      const div2 = document.querySelectorAll(".wall");
+      const arr = [...div2];
       const one = [
         `祝我最爱的Juan～生日快乐<br/>
 每年的今天都很开心很期待<br/>
@@ -90,14 +98,18 @@
 爱你
 `,
       ];
-      var typed = new Typed(".element", {
-        strings: one, //输入内容, 支持html标签
-        typeSpeed: 30, //打字速度
-        backSpeed: 50, //回退速度
-      });
+
       setTimeout(() => {
-        // div2.style.display = "black";
-        // div.style.display = "none";
+        // console.log(div2);
+        arr.map((item) => {
+          item.style.display = "block";
+        });
+        div.style.display = "none";
+        var typed = new Typed(".element", {
+          strings: one, //输入内容, 支持html标签
+          typeSpeed: 30, //打字速度
+          backSpeed: 50, //回退速度
+        });
       }, 25000);
     </script>
   </body>
