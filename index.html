@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>心心</title>
+
+    <link
+      href="favicon.ico"
+      rel="shortcut icon"
+      class="icon-love"
+      type="images/x-ico"
+    />
+
+    <link rel="stylesheet" href="css/love.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script src="./js/typed.js"></script> -->
+    <script src="https://cdn.bootcss.com/typed.js/2.0.5/typed.js"></script>
+  </head>
+  <body>
+    <span class="element"></span>
+    <div
+      class="container"
+      onselectstart="return false;"
+      unselectable="on"
+      style="-moz-user-select: none"
+    >
+      <div class="body_left">
+        <img src="images/biubiubiu.gif" alt="" ondragstart="return false;" />
+      </div>
+
+      <div class="body_center love">
+        <div class="block">
+          <div class="div1"></div>
+          <div class="div2"></div>
+          <div class="div3"></div>
+          <div class="div4"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="border">
+        <div class="border-top"></div>
+        <div class="border-bottom"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/love.js"></script>
+
+    <div class="one">
+      <span class="myone"></span>
+      <audio controls autoplay>
+        <source src="mp3/zzsc.mp3" />
+      </audio>
+
+      <table width="100%" id="background" class="wall my">
+        <tr>
+          <td rowspan="2" class="td1">
+            <img src="./img/a1.jpg" alt="" />
+          </td>
+          <td class="td2">
+            <img src="./img/a4.jpg" alt="" />
+          </td>
+          <td rowspan="2" class="td3">
+            <img src="./img/a2.jpg" alt="" />
+          </td>
+          <td class="td4">
+            <img src="./img/a5.jpg" alt="" />
+          </td>
+        </tr>
+        <tr>
+          <td class="td5">
+            <img src="./img/a3.jpg" alt="" />
+          </td>
+          <td class="td6">
+            <img src="./img/a6.jpg" alt="" />
+          </td>
+        </tr>
+      </table>
+      <div id="midground" class="wall"></div>
+      <div id="foreground" class="wall"></div>
+      <div id="top" class="wall"></div>
+    </div>
+
+    <script>
+      const div = document.querySelector(".container");
+      const one = [
+        `祝我最爱的Juan～生日快乐<br/>
+每年的今天都很开心很期待<br/>
+每年的今天都挺激动挺紧张…<br/>
+开心又期待希望这一天周围的人能多给点爱意<br/>
+激动又紧张希望自己带给你的东西能让你温暖又舒心<br/>
+你总说，生日也不过是一年中普普通通的一天罢了<br/>
+对于我来说，认真的说，这并不同于平凡的一天<br/>
+你总说，你被爱着是何其荣幸，<br/>
+可我在想，这20多年，能有一个人让我爱着，还如此值得，我又多么幸运<br/><br/>
+
+很感谢高一初始的缘分，认识你很开心<br/>
+很感谢之后的相知相惜，有你很安心。<br/><br/>
+
+永远这个词太飘渺<br/>
+在你需要我的时候，我会一直在<br/>
+愿你平安顺遂，自由无忧～<br/>
+爱你
+`,
+      ];
+      var typed = new Typed(".element", {
+        strings: one, //输入内容, 支持html标签
+        typeSpeed: 30, //打字速度
+        backSpeed: 50, //回退速度
+      });
+      setTimeout(() => {
+        // div2.style.display = "black";
+        div.style.display = "none";
+      }, 25000);
+    </script>
+  </body>
+</html>
